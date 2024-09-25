@@ -11,9 +11,9 @@ import {
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
+import Tab1 from './pages/comida';
+import Tab2 from './pages/lugares';
+import Tab3 from './pages/emergencia';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -52,31 +52,31 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
+          <Route exact path="/comida">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
+          <Route exact path="/lugares">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route path="/emergencia">
             <Tab3 />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/comida" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="comida" href="/comida">
             <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Comida</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+          <IonTabButton tab="lugares" href="/lugares">
+            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonLabel>Lugares</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="emergencia" href="/emergencia">
+            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonLabel>Emergencia</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
